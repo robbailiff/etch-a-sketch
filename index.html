@@ -14,33 +14,35 @@
 	</header>
 
 	<main>
-		<section class="draw-options">
+		<section id="draw-options" class="side-panel">
 			<form>
-				<label for="">Black</label>
-				<input type="button">
-
-				<label for="">Random Colour</label>
-				<input type="button">
-
-				<label for="">Colour Picker</label>
-				<input type="color">
-
-				<label for="">Eraser</label>
-				<input type="button">
+				<button id="black">Black</button>
+                <button id="rainbow">Rainbow</button>
+				<button id="random">Random</button>
+                <div id="colour-pick">
+                    <label for="">Colour Picker</label>
+                    <input type="color" value="#ff0000">
+                </div>
 			</form>
 		</section>
 
-	    <section class="grid-container">
+	    <section id="grid-container">
 
 	    </section>
 
-	    <section class="grid-options">
+	    <section id="grid-options" class="side-panel">
 	    	<form>
-	    		<label for="">Reset</label>
-				<input type="button">
-
-	    		<label for="">Grid Size</label>
-				<input type="range">
+                <button id="eraser">Eraser</button>
+                <button id="reset">Reset</button>
+                <button id="grid-lines">Grid Lines</button>
+                <div id="slider">
+                    <label for="grid-slider">Grid Size</label>
+                    <div id="inputs">
+                        <input type="range" id="grid-slider" name="grid-size" min="2" max="100" value="16">
+                        <p>16</p>
+                        <!-- <input type="text" id="grid-size" value="16"> -->
+                    </div>
+                </div>
 	    	</form>
 	    </section>
     </main>

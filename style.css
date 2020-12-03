@@ -1,30 +1,55 @@
 body {
-	display:grid;
-	justify-content: center;
+    
+}
+
+h1 {
+    text-align: center;
 }
 
 main {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
-	/*grid-template-columns: 10vw 40vw 10vw;*/
-	grid-gap: 5vw
-	/*justify-content: center;*/
-	/*justify-content: space-around;*/
+    grid-gap: 5vw;
+	justify-content: center;
 }
 
-.draw-options {
+.side-panel>form {
+    width: 10vw;
+    height: 15vw;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.side-panel * {
+    margin-top: 10px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+}
+
+#draw-options {
 	display: grid;
 	align-content: space-around;
 }
 
-.draw-options>form {
-	display: grid;
-	align-content: center;
+#draw-options>form {
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
-.grid-container {
-    width: 40vw;
-    height: 40vw;
+#colour-pick {
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    margin-top: 0;
+}
+
+#grid-container {
+    width: 35vw;
+    height: 35vw;
     border: 10px solid black;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -36,11 +61,34 @@ main {
     border: 1px solid black;
 }
 
-.grid-options {
-
-}
-
-.grid-options>form {
-	display: grid;
+#grid-options {
+    display: grid;
 	align-content: space-around;
 }
+
+#grid-options>form {
+	display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#slider {
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    margin-top: 0;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+}
+
+/* .grid-slider {
+    background-color: blue;
+    width: 100px;
+    outline: blue;
+    border-radius: 50px;
+} */
