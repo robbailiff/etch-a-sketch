@@ -4,23 +4,6 @@ let drawColour = "black";
 let gridLines = true;
 
 createGrid();
-
-// for (let i = 1; i <= gridSize**2; i++) {
-//     const newCell = document.createElement("div");
-//     newCell.classList.add("grid-cell");
-//     container.append(newCell);
-// };
-
-const cells = document.querySelectorAll(".grid-cell");
-cells.forEach((cell) => {
-	cell.addEventListener("mouseenter", (e) => {
-	    if (drawColour === "rainbow") {
-	    	e.target.style.backgroundColor = randomColour();
-	    } else {
-	    	e.target.style.backgroundColor = drawColour;
-	    }
-	})
-})
      
 const colourButtons = document.querySelectorAll("button.colour-change");
 colourButtons.forEach((button) => {
@@ -43,6 +26,17 @@ resetButton.addEventListener("click", () => {
 })
 
 const gridButton = document.querySelector("#grid-lines");
+gridButton.addEventListener("click", () => {
+	const gridCells = document.querySelectorAll(".grid-cell");
+	gridCells.forEach((cell) => {
+		if (gridLines) {
+			cell.style.border = "none";
+		} else {
+			cell.style.border = "1px solid black";
+		}
+	})
+	gridLines = !gridLines;
+})
 
 function createGrid(){
 	for (let i = 1; i <= gridSize**2; i++) {
@@ -50,6 +44,17 @@ function createGrid(){
 	    newCell.classList.add("grid-cell");
 	    container.append(newCell);
 	}
+
+	const cells = document.querySelectorAll(".grid-cell");
+	cells.forEach((cell) => {
+		cell.addEventListener("mouseenter", (e) => {
+			if (drawColour === "rainbow") {
+				e.target.style.backgroundColor = randomColour();
+			} else {
+				e.target.style.backgroundColor = drawColour;
+			}
+		})
+	})
 }
 
 function randomColour(){
@@ -60,9 +65,9 @@ function randomColour(){
 	return rgbColour;
 }
 
-// function resetGrid() {
-// 	while(container.firstChild) {
-// 		container.removeChild(container.firstChild);
-// 	}
-// 	createGrid();
-// }
+function resetGrid() {
+	while(container.firstChild) {
+		container.removeChild(container.firstChild);
+	}
+	createGrid();
+}
