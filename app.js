@@ -20,6 +20,11 @@ colourButtons.forEach((button) => {
 	})
 })
 
+const colourPicker = document.querySelector("#picker")
+colourPicker.addEventListener("input", () => {
+	drawColour = colourPicker.value;
+})
+
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", () => {
 	resetGrid();
@@ -38,12 +43,23 @@ gridButton.addEventListener("click", () => {
 	gridLines = !gridLines;
 })
 
+const changeGrid = document.querySelector("#grid-slider");
+changeGrid.addEventListener("input", () => {
+	const sliderText = document.querySelector("#slider-text");
+	sliderText.textContent = changeGrid.value;
+	gridSize = changeGrid.value;
+	resetGrid();
+})
+
 function createGrid(){
 	for (let i = 1; i <= gridSize**2; i++) {
 	    const newCell = document.createElement("div");
 	    newCell.classList.add("grid-cell");
 	    container.append(newCell);
 	}
+
+	container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+	container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
 
 	const cells = document.querySelectorAll(".grid-cell");
 	cells.forEach((cell) => {

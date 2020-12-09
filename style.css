@@ -1,8 +1,30 @@
+html {
+	font-family: 'Poiret One', cursive;
+	font-size: 1rem;
+	color: #ff9763;
+	text-shadow: 
+		0 0 1rem #ff9763,
+		0 0 2rem #ff9763,
+		0 0 4rem #db2509,
+		0 0 6rem #db2509,
+		0 0 8rem #db2509,
+		0 0 10rem #db2509;
+	background: 
+		no-repeat center center fixed
+		linear-gradient(
+		to bottom,
+		rgb(0,0,0) 0%,
+		rgb(47, 25, 69) 100%
+		);
+	background-size: cover;
+}
+
 body {
     
 }
 
 h1 {
+	font-size: 3rem;
     text-align: center;
 }
 
@@ -13,20 +35,50 @@ main {
 	justify-content: center;
 }
 
+.side-panel>form, button, #grid-container {
+	color: #ff9763;
+	text-shadow: 
+		0 0 1rem #ff9763,
+		0 0 2rem #ff9763,
+		0 0 4rem #db2509,
+		0 0 6rem #db2509,
+		0 0 8rem #db2509,
+		0 0 10rem #db2509;
+	/*background-color: black;*/
+	border-color: #ff9763;
+} 
+
 .side-panel>form {
     width: auto;
     height: auto;
-    border: 1px solid red;
+    border: 2px solid;
+    box-shadow: 
+		0 0 2px #ff9763,
+		0 0 4px #ff9763,
+		0 0 6px #db2509,
+		0 0 8px #db2509,
+		0 0 10px #db2509;
     padding: 10px;
 }
 
 .side-panel * {
+	font-size: 1.25rem;
     margin-top: 10px;
 }
 
 button {
     width: 120px;
     height: 50px;
+    font-family: 'Poiret One', cursive;
+    color: #ff9763;
+	border: 1px solid;
+	box-shadow: 
+		0 0 1px #ff9763,
+		0 0 2px #ff9763,
+		0 0 3px #db2509,
+		0 0 4px #db2509,
+		0 0 5px #db2509;
+	background-color: Transparent;
 }
 
 #draw-options {
@@ -48,10 +100,30 @@ button {
     margin-top: 0;
 }
 
+#picker {
+	appearance: none;
+	width: 80px;
+	/*height: 10px; */
+	/*background: grey; */
+	border: 1px solid #ff9763;
+	box-shadow: 
+		0 0 1px #ff9763,
+		0 0 2px #db2509,
+		0 0 3px #db2509;
+	padding: 1px;
+	/*outline: none;  */
+}
+
 #grid-container {
     width: 35vw;
     height: 35vw;
-    border: 10px solid black;
+    border: 5px solid;
+    box-shadow: 
+		0 0 5px #ff9763,
+		0 0 10px #ff9763,
+		0 0 15px #db2509,
+		0 0 20px #db2509,
+		0 0 25px #db2509;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, auto);
@@ -89,8 +161,14 @@ button {
 }
 
  #grid-slider {
-    background-color: blue;
-    width: 100px;
-    outline: blue;
-    /*border-radius: 50px;*/
+	appearance: none;
+	width: 100px;
+	height: 10px; 
+	background: #ff9763; 
+	outline: none;  
 } 
+
+#slider-text {
+	font-size: 1.1rem;
+	padding-left: 5px;
+}
