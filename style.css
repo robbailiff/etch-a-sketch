@@ -44,7 +44,6 @@ main {
 		0 0 6rem #db2509,
 		0 0 8rem #db2509,
 		0 0 10rem #db2509;
-	/*background-color: black;*/
 	border-color: #ff9763;
 } 
 
@@ -103,15 +102,12 @@ button {
 #picker {
 	appearance: none;
 	width: 80px;
-	/*height: 10px; */
-	/*background: grey; */
 	border: 1px solid #ff9763;
 	box-shadow: 
 		0 0 1px #ff9763,
 		0 0 2px #db2509,
 		0 0 3px #db2509;
 	padding: 1px;
-	/*outline: none;  */
 }
 
 #grid-container {
@@ -145,19 +141,13 @@ button {
     align-items: center;
 }
 
-/*#slider {
-	width: 120px;
-    display: grid;
-    justify-items: center;
-    align-content: space-around;
-    margin-top: 0;
-}*/
-
 #inputs {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
  #grid-slider {
@@ -166,9 +156,12 @@ button {
 	height: 10px; 
 	background: #ff9763; 
 	outline: none;  
+	margin-bottom: 0;
 } 
 
 #slider-text {
 	font-size: 1.1rem;
 	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 2px;
 }
