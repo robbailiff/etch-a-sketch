@@ -19,20 +19,15 @@ html {
 	background-size: cover;
 }
 
-body {
-    
-}
-
 h1 {
 	font-size: 3rem;
     text-align: center;
 }
 
 main {
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-    grid-gap: 5vw;
-	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 .side-panel>form, button, #grid-container {
@@ -111,8 +106,8 @@ button {
 }
 
 #grid-container {
-    width: 35vw;
-    height: 35vw;
+    width: 40vw;
+    height: 40vw;
     border: 5px solid;
     box-shadow: 
 		0 0 5px #ff9763,
@@ -164,4 +159,83 @@ button {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 740px) {
+	main {
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	#grid-container {
+		order: 1;
+		width: 80vw;
+		height: 80vw;
+		margin-bottom: 5%;
+	}
+	.side-panel {
+		order: 2;
+	}
+	.side-panel>form {
+		width: 100px;
+	}
+	.side-panel * {
+		font-size: 1rem;
+		margin-top: 5px;
+	}
+	button, #colour-pick, #slider {
+		width: 90%;
+		height: 90%;
+	}
+	#picker {
+		width: 50px;
+	}
+
+	#grid-slider {
+		width: 70px;
+	}
+	#slider-text {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.side-panel>form {
+		width: 80px;
+	}
+	.side-panel * {
+		font-size: 0.75rem;
+	}
+	#picker {
+		width: 40px;
+		height: 20px;
+	}
+	#grid-slider {
+		width: 50px;
+		height: 5px;
+	}
+	#slider-text {
+		font-size: 0.75rem;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.side-panel>form {
+		width: 60px;
+	}
+	.side-panel * {
+		font-size: 0.5rem;
+	}
+	#picker {
+		width: 40px;
+		height: 20px;
+	}
+	#grid-slider {
+		width: 40px;
+		height: 5px;
+	}
+	#slider-text {
+		font-size: 0.5rem;
+		padding-bottom: 8px;
+	}
 }
